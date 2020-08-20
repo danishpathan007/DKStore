@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		074AF36924C20B740016A06B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074AF36824C20B740016A06B /* Category.swift */; };
 		074AF36C24C20C140016A06B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074AF36B24C20C140016A06B /* Constants.swift */; };
+		075B9F0D24EE6A15001AD32D /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075B9F0C24EE6A15001AD32D /* AddItemViewController.swift */; };
+		075B9F0F24EE76AF001AD32D /* Reachabilty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075B9F0E24EE76AF001AD32D /* Reachabilty.swift */; };
+		075B9F1124EE771D001AD32D /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075B9F1024EE771D001AD32D /* Downloader.swift */; };
+		075B9F1324EE8DC9001AD32D /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075B9F1224EE8DC9001AD32D /* ItemTableViewCell.swift */; };
+		075B9F1624EE9227001AD32D /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075B9F1524EE9227001AD32D /* HelperFunctions.swift */; };
+		075B9F1824EE9AE0001AD32D /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075B9F1724EE9AE0001AD32D /* ItemViewController.swift */; };
+		075B9F1A24EE9DA4001AD32D /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075B9F1924EE9DA4001AD32D /* ImageCollectionViewCell.swift */; };
 		07816EA724EDA72B005B60F0 /* ItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07816EA624EDA72B005B60F0 /* ItemsTableViewController.swift */; };
 		07816EA924EDA8DE005B60F0 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07816EA824EDA8DE005B60F0 /* Item.swift */; };
 		07C58F6B24ED4CC800706778 /* CategoryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C58F6A24ED4CC800706778 /* CategoryCollectionViewController.swift */; };
@@ -26,6 +33,13 @@
 /* Begin PBXFileReference section */
 		074AF36824C20B740016A06B /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		074AF36B24C20C140016A06B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		075B9F0C24EE6A15001AD32D /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		075B9F0E24EE76AF001AD32D /* Reachabilty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachabilty.swift; sourceTree = "<group>"; };
+		075B9F1024EE771D001AD32D /* Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
+		075B9F1224EE8DC9001AD32D /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		075B9F1524EE9227001AD32D /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
+		075B9F1724EE9AE0001AD32D /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		075B9F1924EE9DA4001AD32D /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		07816EA624EDA72B005B60F0 /* ItemsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTableViewController.swift; sourceTree = "<group>"; };
 		07816EA824EDA8DE005B60F0 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		07C58F6A24ED4CC800706778 /* CategoryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +84,9 @@
 			children = (
 				07C58F7024ED53FD00706778 /* FirebaseCollectionReference.swift */,
 				074AF36B24C20C140016A06B /* Constants.swift */,
+				075B9F0E24EE76AF001AD32D /* Reachabilty.swift */,
+				075B9F1024EE771D001AD32D /* Downloader.swift */,
+				075B9F1524EE9227001AD32D /* HelperFunctions.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -78,6 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				07C58F6C24ED4D9300706778 /* CategoryCollectionViewCell.swift */,
+				075B9F1224EE8DC9001AD32D /* ItemTableViewCell.swift */,
+				075B9F1924EE9DA4001AD32D /* ImageCollectionViewCell.swift */,
 			);
 			path = "Custom Cells";
 			sourceTree = "<group>";
@@ -87,6 +106,8 @@
 			children = (
 				07C58F6A24ED4CC800706778 /* CategoryCollectionViewController.swift */,
 				07816EA624EDA72B005B60F0 /* ItemsTableViewController.swift */,
+				075B9F0C24EE6A15001AD32D /* AddItemViewController.swift */,
+				075B9F1724EE9AE0001AD32D /* ItemViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -278,9 +299,16 @@
 			files = (
 				07C58F6B24ED4CC800706778 /* CategoryCollectionViewController.swift in Sources */,
 				07816EA924EDA8DE005B60F0 /* Item.swift in Sources */,
+				075B9F1A24EE9DA4001AD32D /* ImageCollectionViewCell.swift in Sources */,
+				075B9F1824EE9AE0001AD32D /* ItemViewController.swift in Sources */,
+				075B9F1124EE771D001AD32D /* Downloader.swift in Sources */,
 				07C58F7124ED53FD00706778 /* FirebaseCollectionReference.swift in Sources */,
 				07816EA724EDA72B005B60F0 /* ItemsTableViewController.swift in Sources */,
 				07EB32C524C0CBDD006F49B6 /* AppDelegate.swift in Sources */,
+				075B9F1324EE8DC9001AD32D /* ItemTableViewCell.swift in Sources */,
+				075B9F1624EE9227001AD32D /* HelperFunctions.swift in Sources */,
+				075B9F0D24EE6A15001AD32D /* AddItemViewController.swift in Sources */,
+				075B9F0F24EE76AF001AD32D /* Reachabilty.swift in Sources */,
 				07EB32C724C0CBDD006F49B6 /* SceneDelegate.swift in Sources */,
 				074AF36924C20B740016A06B /* Category.swift in Sources */,
 				07C58F6D24ED4D9300706778 /* CategoryCollectionViewCell.swift in Sources */,
