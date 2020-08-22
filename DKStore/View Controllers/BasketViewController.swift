@@ -72,9 +72,7 @@ class BasketViewController: UIViewController {
     }
     
     private func getBasketItems() {
-        
         if basket != nil {
-            
             downloadItems(basket!.itemIds) { (allItems) in
                 self.allItems = allItems
                 self.updateTotalLabels(false)
@@ -95,10 +93,7 @@ class BasketViewController: UIViewController {
               totalItemsLabel.text = "\(allItems.count)"
               basketTotalPriceLabel.text = returnBasketTotalPrice()
           }
-          
-          
-          //TODO: Update the button status
-
+        checkoutButtonStatusUpdate()
       }
       
       private func returnBasketTotalPrice() -> String {
@@ -111,8 +106,35 @@ class BasketViewController: UIViewController {
           
           return "Total price: " + convertToCurrency(totalPrice)
       }
+    
+    private func checkoutButtonStatusUpdate() {
+        checkOutButtonOutlet.isEnabled = allItems.count > 0
+        if checkOutButtonOutlet.isEnabled {
+            checkOutButtonOutlet.backgroundColor = #colorLiteral(red: 0.8823529412, green: 0.3960784314, blue: 0.5960784314, alpha: 1)
+        }else{
+            disableCheckoutButton()
+        }
+    }
 
+    private func disableCheckoutButton() {
+        checkOutButtonOutlet.isEnabled = false
+        checkOutButtonOutlet.backgroundColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
+    }
 
+    private func removeItemFromBasket(itemId: String) {
+        for i in 0..<basket!.itemIds.count {
+            if itemId == basket!.itemIds[i] {
+                basket!.itemIds.remove(at: i)
+                return
+            }
+        }
+    }
+    
+    private func showItemView(withItem: Item){
+        let itemVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "itemView") as! ItemViewController
+        itemVC.item = withItem
+        self.navigationController?.pushViewController(itemVC, animated: true)
+    }
 
 }
 
@@ -133,6 +155,31 @@ extension BasketViewController: UITableViewDataSource, UITableViewDelegate {
         return 80
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        showItemView(withItem: allItems[indexPath.row])
+    }
+    
+    
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let itemToDelete = allItems[indexPath.row]
+            allItems.remove(at: indexPath.row)
+            tableView.reloadData()
+            removeItemFromBasket(itemId: itemToDelete.id)
+            updateBasketInFirestore(basket!, withValues: [kITEMIDS: basket!.itemIds]) { (error) in
+                if error != nil {
+                    print("Error updating the basket",error!.localizedDescription)
+                }
+                self.getBasketItems()
+            }
+        }
+    }
     
 }
 

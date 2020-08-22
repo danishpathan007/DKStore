@@ -409,7 +409,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1q5-kj-iFU">
-                                <rect key="frame" x="0.0" y="148" width="414" height="625"/>
+                                <rect key="frame" x="0.0" y="128" width="414" height="645"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="Fxf-3P-V0J">
                                     <rect key="frame" x="0.0" y="186" width="414" height="44"/>
@@ -418,7 +418,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total is 3000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mK7-WG-xCr">
                                             <rect key="frame" x="294.5" y="11.5" width="99.5" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -492,7 +492,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Items in basket :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGK-J5-wB6">
-                                <rect key="frame" x="15" y="103" width="125" height="25"/>
+                                <rect key="frame" x="15" y="98" width="125" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="fMg-F7-vOz"/>
                                     <constraint firstAttribute="width" constant="125" id="ybB-dF-Ews"/>
@@ -502,7 +502,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcZ-2c-Xnq">
-                                <rect key="frame" x="142" y="103" width="252" height="21"/>
+                                <rect key="frame" x="142" y="100" width="252" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -523,19 +523,19 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="uGK-J5-wB6" firstAttribute="top" secondItem="0r5-Ma-fOt" secondAttribute="top" constant="15" id="6NX-qR-sUs"/>
+                            <constraint firstItem="uGK-J5-wB6" firstAttribute="top" secondItem="0r5-Ma-fOt" secondAttribute="top" constant="10" id="6NX-qR-sUs"/>
                             <constraint firstItem="fcZ-2c-Xnq" firstAttribute="height" secondItem="uGK-J5-wB6" secondAttribute="height" multiplier="0.84" id="FvN-hD-hiN"/>
                             <constraint firstItem="uGK-J5-wB6" firstAttribute="leading" secondItem="0r5-Ma-fOt" secondAttribute="leading" constant="15" id="KKm-NE-L4U"/>
                             <constraint firstItem="fcZ-2c-Xnq" firstAttribute="leading" secondItem="uGK-J5-wB6" secondAttribute="trailing" constant="2" id="Mst-0S-yGD"/>
                             <constraint firstItem="0r5-Ma-fOt" firstAttribute="bottom" secondItem="v2l-TO-I2m" secondAttribute="bottom" id="PZB-nW-chR"/>
                             <constraint firstItem="v2l-TO-I2m" firstAttribute="leading" secondItem="0r5-Ma-fOt" secondAttribute="leading" id="QpC-0p-uWs"/>
-                            <constraint firstItem="fcZ-2c-Xnq" firstAttribute="top" secondItem="uGK-J5-wB6" secondAttribute="top" id="VgR-fZ-SEn"/>
+                            <constraint firstItem="fcZ-2c-Xnq" firstAttribute="top" secondItem="uGK-J5-wB6" secondAttribute="top" constant="2" id="VgR-fZ-SEn"/>
                             <constraint firstItem="0r5-Ma-fOt" firstAttribute="trailing" secondItem="fcZ-2c-Xnq" secondAttribute="trailing" constant="20" id="YLP-KP-DmR"/>
                             <constraint firstItem="1q5-kj-iFU" firstAttribute="leading" secondItem="0r5-Ma-fOt" secondAttribute="leading" id="cmf-J8-0b8"/>
                             <constraint firstItem="0r5-Ma-fOt" firstAttribute="trailing" secondItem="v2l-TO-I2m" secondAttribute="trailing" id="ehi-6g-vUH"/>
                             <constraint firstItem="v2l-TO-I2m" firstAttribute="top" secondItem="1q5-kj-iFU" secondAttribute="bottom" id="fRL-IK-oHj"/>
                             <constraint firstItem="1q5-kj-iFU" firstAttribute="trailing" secondItem="0r5-Ma-fOt" secondAttribute="trailing" id="gPi-ye-He6"/>
-                            <constraint firstItem="1q5-kj-iFU" firstAttribute="top" secondItem="uGK-J5-wB6" secondAttribute="bottom" constant="20" id="k6x-9A-Cvn"/>
+                            <constraint firstItem="1q5-kj-iFU" firstAttribute="top" secondItem="uGK-J5-wB6" secondAttribute="bottom" constant="5" id="k6x-9A-Cvn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0r5-Ma-fOt"/>
                     </view>
